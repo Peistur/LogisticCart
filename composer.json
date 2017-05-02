@@ -13,15 +13,44 @@
         "bin-dir": "bin",
         "vendor-dir": "lib"
     },
-    "extra": {},
+    "extra": {
+        "incenteev-parameters": [
+            {
+                "dist-file": "etc/parameters.yml.dist",
+                "file": "etc/config.d/parameters.yml"
+            }
+        ],
+        "symfony-app-dir": "boot",
+        "symfony-bin-dir": "bin",
+        "symfony-test-dir": "tests",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "public"
+    },
     "autoload": {
+        "classmap": [ "Kernel.php" ],
         "psr-4": {}
     },
     "require": {
+        "incenteev/composer-parameter-handler": "^2.1",
+        "sensio/framework-extra-bundle": "^3.0",
+        "symfony/framework-bundle": "^3.2",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/symfony": "^3.2",
+
         "php": ">= 7.1"
     },
     "require-dev": {
         "php": ">= 7.1"
     },
-    "scripts": {}
+    "scripts": {
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    }
 }

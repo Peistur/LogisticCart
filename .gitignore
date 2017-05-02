@@ -1,2 +1,5 @@
 bin/
+etc/config.d/parameters.yml
 lib/
+public/
+var/

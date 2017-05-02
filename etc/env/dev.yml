@@ -1,0 +1,26 @@
+imports:
+    - { resource: ../config.d/ }
+
+framework:
+    profiler:
+        only_exceptions: false
+    router:
+        resource: '%kernel.config_dir%/routing/routing_dev.yml'
+        strict_requirements: true
+    templating:
+        engines: [twig]
+
+monolog:
+    handlers:
+        main:
+            channels: [!event]
+        console:
+            channels: [!event, !doctrine]
+
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+
+web_profiler:
+    toolbar: true
+    intercept_redirects: false

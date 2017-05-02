@@ -1,0 +1,8 @@
+monolog:
+    handlers:
+        main:
+            level: debug
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
+            type: stream
+        console:
+            type: console

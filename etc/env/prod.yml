@@ -1,0 +1,9 @@
+imports:
+    - { resource: ../config.d/ }
+
+monolog:
+    handlers:
+        top:
+            action_level: error
+            handler: main
+            type: fingers_crossed
