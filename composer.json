@@ -1,0 +1,27 @@
+{
+    "name": "deliberry/${PROJECT_NAME}",
+    "description": "${PROJECT_DESCRIPTION}",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Deliberry Team",
+            "email": "it@deliberry.com"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "lib"
+    },
+    "extra": {},
+    "autoload": {
+        "psr-4": {}
+    },
+    "require": {
+        "php": ">= 7.1"
+    },
+    "require-dev": {
+        "php": ">= 7.1"
+    },
+    "scripts": {}
+}
