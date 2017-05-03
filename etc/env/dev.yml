@@ -12,10 +12,15 @@ framework:
 
 monolog:
     handlers:
-        main:
+        buffer:
             channels: [!event]
+            handler: easylog
+            type: buffer
         console:
             channels: [!event, !doctrine]
+        easylog:
+            id: easycorp.easylog.handler
+            type: service
 
 twig:
     debug: '%kernel.debug%'
@@ -24,3 +29,10 @@ twig:
 web_profiler:
     toolbar: true
     intercept_redirects: false
+
+services:
+    easycorp.easylog.handler:
+        class: EasyCorp\EasyLog\EasyLogHandler
+        arguments:
+            - '%kernel.logs_dir%/%kernel.environment%.easylog.log'
+        public: false
