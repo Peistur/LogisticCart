@@ -1,0 +1,8 @@
+doctrine:
+    dbal:
+        default_connection: write
+        connections:
+            read:
+                url: '%read_database_url%'
+            write:
+                url: '%write_database_url%'
