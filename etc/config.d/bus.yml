@@ -1,0 +1,7 @@
+simple_bus_rabbit_mq_bundle_bridge:
+    events:
+        producer_service_id: deliberry.event_producer
+    routing_key_resolver: class_based
+
+doctrine_orm_bridge:
+    connection: write

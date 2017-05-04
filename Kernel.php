@@ -14,6 +14,14 @@ class Kernel extends HttpKernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            new SimpleBus\SymfonyBridge\SimpleBusCommandBusBundle(),
+            new SimpleBus\SymfonyBridge\SimpleBusEventBusBundle(),
+            new SimpleBus\SymfonyBridge\DoctrineOrmBridgeBundle(),
+            new SimpleBus\AsynchronousBundle\SimpleBusAsynchronousBundle(),
+            new OldSound\RabbitMqBundle\OldSoundRabbitMqBundle(),
+            new SimpleBus\RabbitMQBundleBridge\SimpleBusRabbitMQBundleBridgeBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new SimpleBus\JMSSerializerBundleBridge\SimpleBusJMSSerializerBundleBridgeBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -7,3 +7,6 @@ parameters:
     # Database setup
     read_database_url: 'mysql://root:root@localhost/{$READ_DATABASE}'
     write_database_url: 'mysql://root:root@localhost/{$WRITE_DATABASE}'
+
+    # RabbitMQ setup
+    rabbitmq_url: 'amqp://guest:guest@localhost:5672?lazy=1'
