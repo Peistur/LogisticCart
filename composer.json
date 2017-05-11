@@ -29,10 +29,15 @@
     "autoload": {
         "classmap": [ "Kernel.php" ],
         "psr-4": {
-            "Deliberry\\${PROJECT_NAMESPACE}\\": "src/Domain",
+            "Peistur\\LogisticCart\\": "src/Domain",
             "Deliberry\\Application\\": "src/Application",
             "Deliberry\\Bundle\\": "src/Infrastructure/Framework",
             "Deliberry\\Infrastructure\\": "src/Infrastructure"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
         }
     },
     "require": {
@@ -48,12 +53,15 @@
         "symfony/monolog-bundle": "^3.1",
         "symfony/symfony": "^3.2",
 
-        "php": ">= 7.1"
+        "php": ">= 7.1",
+        "sebastian/money": "^1.6",
+        "ramsey/uuid": "^2.9"
     },
     "require-dev": {
         "easycorp/easy-log-handler": "^1.0",
         "phpunit/phpunit": "^6.1",
-
+        "symfony/phpunit-bridge": "^3.2",
+        "symfony/var-dumper": "^3.2",
         "php": ">= 7.1"
     },
     "scripts": {
